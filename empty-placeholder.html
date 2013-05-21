@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <style type="text/css"> 
+    body{
+      font: 110%/1.6 normal normal Helvetica, Arial, sans-serif;
+      width: 80%;
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+    ul{
+      border: 1px solid gray;
+      padding: 1.5rem 1rem;
+      max-width: 20rem;
+      list-style: inside;
+    }
+    ul:empty::after{
+      content: attr(data-empty-message);
+    }
+  </style>
+</head>
+<body>
+  <h1>Placeholder for empty lists using only HTML and CSS</h1>
+  
+  <p>Example of using the <code>:empty</code> pseudo-class together with a pseudo-element in CSS to display a placeholder message when an element does not have child nodes. Using HTML5 <code>data</code> attribute in CSS to decouple placeholder text from stylesheet for easy localization.</p>
+  
+  <h2>List is empty</h2>
+  
+  <ul data-empty-message="You have no unread messages"></ul>
+  
+  <h2>List is not empty</h2>
+  
+  <ul>
+    <li>Message from John</li>
+    <li>Spam from recruiters</li>
+    <li>Cheese SALE</li>
+  </ul>
+  
+  <p><strong>Gotchas</strong>: whitespace counts as a character, empty child nodes count</strong>. Read <a href="http://demosthenes.info/blog/692/Vanishing-Acts-The-CSS-empty-Selector">Dudley Storey's post</a> for more.</p>
+  
+  <p>Follow me on Twitter to get more experiments: <a href="https://twitter.com/razvancaliman">@razvancaliman</a></p>
+  
+</body>
+</html>
